@@ -11,3 +11,6 @@ def topic_name():
 
 def namespace_name():
     return os.getenv('SB_NAMESPACE')
+
+def subscription_name():
+    return os.getenv('SB_SUBSCRIPTION_NAME')
