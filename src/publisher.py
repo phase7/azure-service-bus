@@ -9,4 +9,5 @@ logging.getLogger('azure.servicebus').setLevel(logging.WARNING)
 logger.setLevel(logging.DEBUG)
 
 # print("Publisher started", connection_string())
-logger.info(f"Connection string: {connection_string()}")
+logger.info("Connection string: %s", connection_string())
+
