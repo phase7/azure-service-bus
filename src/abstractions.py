@@ -97,7 +97,7 @@ class ServiceBusPublisher:
         self.client: ServiceBusClient = ServiceBusClientFactory.get_client(
             connection_string)
         self.name: str = name
-        self.strategy: MessageSenderStrategy = strategy
+        self.strategy: MessageSenderStrategy = strategy()
 
     def send_message(self, message_content: str) -> None:
         self.strategy.send_message(self.client, self.name, message_content)
@@ -108,7 +108,7 @@ class ServiceBusSubscriber:
         self.client: ServiceBusClient = ServiceBusClientFactory.get_client(
             connection_string)
         self.name: str = name
-        self.strategy: MessageReceiverStrategy = strategy
+        self.strategy: MessageReceiverStrategy = strategy()
 
     def start_listening(self,
                         message_handler: Callable[[ServiceBusReceivedMessage], None],
