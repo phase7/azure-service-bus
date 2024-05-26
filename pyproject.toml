@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.12"
 azure-servicebus = "^7.12.2"
 typer = {extras = ["full"], version = "^0.12.3"}
+python-dotenv = "^1.0.1"
 
 
 [build-system]
