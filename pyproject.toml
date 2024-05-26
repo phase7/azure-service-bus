@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "azure-service-bus"
+version = "0.1.0"
+description = ""
+authors = ["Ratul <89194947+ratul-cefalo@users.noreply.github.com>"]
+license = "MPL-2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+azure-servicebus = "^7.12.2"
+typer = {extras = ["full"], version = "^0.12.3"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
